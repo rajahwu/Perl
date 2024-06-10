@@ -115,13 +115,15 @@ sub some_function {
 
 ## Community and Support
 
-PerlMonks: A community dedicated to everything Perl. PerlMonks
-Stack Overflow: Ask questions and find answers tagged with perl.
+- PerlMonks: A community dedicated to everything Perl. PerlMonks
+- Stack Overflow: Ask questions and find answers tagged with perl.
 
 ## Practice
 
-Coding Challenges: Sites like HackerRank, Exercism, and LeetCode have coding challenges to practice Perl.
-Example Script
+- Coding Challenges: Sites like HackerRank, Exercism, and LeetCode have coding challenges to practice Perl.
+
+## Example Script
+
 Here's a simple script that reads a file, processes each line, and writes the output to another file:
 
 ```perl
