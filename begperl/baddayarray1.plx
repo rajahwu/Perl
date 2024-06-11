@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-#dayarray.plx
+#baddayarray1.plx
 use warnings;
 use strict;
 

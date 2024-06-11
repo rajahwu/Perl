@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-#auto1.plx
+#auto2.plx
 use warnings;
 $a = "A9"; print ++$a, "\n";
 $a = "bz"; print ++$a, "\n";

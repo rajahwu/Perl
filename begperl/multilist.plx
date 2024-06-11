@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-#begperl/multilist.plx
+#multilist.plx
 use warnings;
 use strict;
  my $mone; my $mtwo;

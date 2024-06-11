@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-#currency1.plx
+#countdown.plx
 use warnings;
 use strict;
 

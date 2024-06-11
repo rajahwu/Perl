@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-#badprefix.plx
+#scalarsub.plx
 use warnings;
 use strict;
 
