@@ -17,20 +17,20 @@ my ($value, $from, $to, $rate, %rates);
 
 print "Enter your starting currency: ";
 $from = <STDIN>;
+
 print "Enter your target currency: ";
 $to = <STDIN>;
+
 print "Enter your amount: ";
 $value = <STDIN>;
 
 chomp($from, $to, $value);
 
-if (not exists $rates{$from}) {
-    die "I don't know anything about $from as a currency\n";
-}
+exists $rates{$from}
+ or die "I don't know anything about $from as a currency\n";
 
-if (not exists $rates{$to}) {
-    die "I don't know anything about $to as a currency\n";
-}
+exists $rates{$to}
+ or die "I don't know anything about $to as a currency\n";
 
 $rate = $rates{$to} / $rates{$from};
 
