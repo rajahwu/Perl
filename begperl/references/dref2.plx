@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-#deref2.plx
+#dref2.plx
 use warnings;
 use strict;
 
