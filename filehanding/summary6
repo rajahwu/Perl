@@ -1,0 +1,278 @@
+1:Files and Data
+2:Filehandles
+3:is just the same as our original example in Chapter 1. There's one more 'standard' filehandle: standard
+4:Chapter 6
+5:The operator for opening a filehandle is open, and it takes two arguments, the first being the name of
+6:You may specify a full path to a file, but don't forget that if you're on Windows, a backslash in a doublequoted string introduces an escape character. So, for instance, you should say this:
+7:rather than:
+8:as \t in a double-quoted string is a tab, and \n is a new line. You could also say
+9:180
+10:Files and Data
+11:>perl badopen.plx
+12:Reading Lines
+13:Try It Out : Numbering Lines
+14:Now, create the file nlexample.txt with the following contents:
+15:have to face
+16:181
+17:Chapter 6
+18:How It Works
+19:Since we're expecting our line numbers to start at one, we'll initialize our counter:
+20:Now we read each line from the file in turn, which we do with a little magic:
+21:This syntax is actually equivalent to:
+22:Finally, we print out the line in question:
+23:There's no need to add a newline since we didn't bother chomping the incoming line. Of course, using a
+24:But since we're going to want to expand the capabilities of our program -adding more operations to the
+25:182
+26:Files and Data
+27:Creating Filters
+28:Now Perl expects us to give the name of the file on the command line:
+29:183
+30:Chapter 6
+31:And now we can run this on our example file and itself:
+32:184
+33:Files and Data
+34:so we set $current to what it should be – the new value – so we can catch it again next time:
+35:We then print out the name of the new file, offset by new lines and tabs:
+36:and reset the counter so we start counting the new file from line one again.
+37:As with most tricks like these, it's actually really simple to code it once you've seen how it's coded. The
+38:Reading More than One Line
+39:This is, however, quite memory-intensive. Perl has to store every single line of the file into the array,
+40:185
+41:Chapter 6
+42:What's My Line (Separator)?
+43:Try It Out : Fortune Cookie Dispenser
+44:186
+45:Files and Data
+46:This is what you get (or might get – it is random, after all):
+47:How It Works
+48:Now a 'line' is everything up to a newline character and then a percent sign on its own and then another
+49:-- Larry
+50:We want a random line from the file. The operator for this is rand:
+51:rand produces a random number between zero and the number given as an argument. What's the
+52:187
+53:Chapter 6
+54:Finally, we can print it back out, remembering that we need to put a new line on the end:
+55:Reading Paragraphs at a Time
+56:Try It Out : Paragraph Summariser
+57:When run on the beginning of this chapter, it gives the following output:
+58:How It Works
+59:188
+60:Files and Data
+61:For every paragraph we read in, we print a new number, then get the first line of the paragraph:
+62:First we split the paragraph into lines, by splitting around a newline character. Since split just
+63:Reading Entire Files
+64:You may also see the form undef $/ doing the same job: the undef operator gives a variable the
+65:Writing to Files
+66:Opening a File for Writing
+67:189
+68:Chapter 6
+69:This will either create a new file or completely wipe out the contents of an already existing file and let
+70:There's no easy way of adding or changing text at the beginning or middle of a file. The typical way to
+71:This is exactly the same as open FH, $filename; as we've used previously; it's just a little more
+72:Writing on a Filehandle
+73:When we want to write to a file, we'll use this instead:
+74:So, for instance, here's one way of copying a file:
+75:Try It Out : File Copying
+76:190
+77:Files and Data
+78:Now there isn't much to see in this program, but let's run it anyway:
+79:How It Works
+80:The command line arguments to our program are in the @ARGV array, as we saw in Chapter 4, and we
+81:However, shift is slightly more common. Next, open our two files:
+82:The first of those lines should be familiar. The second, meanwhile, adds the arrow to show we want to
+83:<IN> returns a list of as many lines as it can in list context. So the while loop steps through this list,
+84:191
+85:Chapter 6
+86:This will read the whole file as a single entry, which is faster for sure, since Perl won't have to think
+87:Try It Out : File Sorter
+88:First, open the files that the user specifies.
+89:❑
+90:Next, read in the file and sort it.
+91:❑
+92:Finally, write the sorted lines out.
+93:Here's the full listing:
+94:Now if we have the following file, sortme.txt:
+95:192
+96:Files and Data
+97:How It Works
+98:We don't tell Perl which array to shift, so it assumes we want @ARGV, which is just as well, because in
+99:In fact, we could just say my @file = sort <INPUT>; and that would be slightly more efficient.
+100:We could even do all this in one line, without using an array:
+101:This is arguably the most efficient solution, and you might think it's relatively easy to understand. What
+102:193
+103:Chapter 6
+104:What have we done? We've declared a flag, $numeric, which will tell us whether or not we're to do a
+105:to the file sorted.txt, while:
+106:Try expanding the one-line version of sort.plx to match that.
+107:194
+108:Files and Data
+109:Accessing Filehandles
+110:Try It Out : Sort As A Filter
+111:195
+112:Chapter 6
+113:How It Works
+114:If there's an input file name defined, we use that. Otherwise, we do this strange thing with the stars.
+115:Writing Binary Data
+116:196
+117:Files and Data
+118:To ensure your files are read and written correctly, always use binmode on binary files, never on
+119:Selecting a Filehandle
+120:Try It Out : Selecting A Log File
+121:# Change this to "file" to send the log to a file!
+122:if ($logging eq "file") {
+123:197
+124:Chapter 6
+125:we apparently get no output at all:
+126:How It Works
+127:If $logging has the value file, which it does now:
+128:We open a filehandle for writing, on the file output.log:
+129:Then we select that filehandle. Now any print statements that don't specify which filehandle to
+130:Or, alternatively, we could select standard output again:
+131:How did we get Perl to print out the time? The key is in this line:
+132:localtime is a function that returns the current time in the local time zone. Ordinarily, it returns a list
+133:198
+134:Files and Data
+135:Right now it would return:
+136:Always be careful when dealing with localtime. Hopefully by now you see the merit
+137:Thankfully, it's now a lot harder to imagine that the fifth element returned is the year. Last year
+138:Buffering
+139:199
+140:Chapter 6
+141:If you need to turn off buffering when writing to a file, be sure to select the appropriate filehandle
+142:Permissions
+143:The file owner,
+144:❑
+145:The group with which the owner is associated, and
+146:❑
+147:Everyone else on the system.
+148:Each of these can have 'read', 'write' and 'execute' permissions assigned. You may have seen these
+149:which denotes full access on a directory (denoted by the prefix 'd') for all users or:
+150:200
+151:Files and Data
+152:which breaks down groupwise as:
+153:and in octal as:
+154:We can therefore specify umask(0710); and subsequent files will be created with any permissions it
+155:Opening Pipes
+156:A pipe is something that connects two filehandles together.
+157:That's it. Usually, you'll be connecting the standard output of one program to the standard input
+158:201
+159:Chapter 6
+160:And nail my feet up where my head should be
+161:That bar in the middle is the pipe. Here's a diagram of what's going on:
+162:sortme.txt
+163:STDIN
+164:sort3.plx
+165:STDOUT
+166:STDIN
+167:nl3.plx
+168:STDOUT
+169:The pipe turns the standard output of sort3.plx into input for nl3.plx.
+170:Piping In
+171:202
+172:Files and Data
+173:This has the benefit of being quicker. It's also safer, as any modification you make like this is local
+174:Try it out : Perl headline
+175:Run today, this tells me:
+176:How It Works
+177:203
+178:Chapter 6
+179:Note that we have to assign the new line to $_ ourselves. The assignment to $_ is only done
+180:The line containing the headline will look something like this:
+181:To retrieve the headline from the middle, we use a regular expression. Generally speaking, reading
+182:We could have said: $head =~ /^<A HREF=[^>]+>(.*?)<\/A>/; backslashing the
+183:204
+184:Files and Data
+185:<A HREF=.*> matches as much as possible before a close bracket. In this case, the most it can
+186:Piping Out
+187:Try It Out : Taking Inventory
+188:205
+189:Chapter 6
+190:How It Works
+191:The only way this infinite loop will end is if $item contains nothing after being chomped – it was
+192:206
+193:Files and Data
+194:If we can't successfully open the pipe – the program wasn't found or we couldn't execute Perl – we alias
+195:We use each to get each key/value pair from the hash, as explained in chapter 3.
+196:This will make the output a little more presentable. If there is more than one of the current item, the
+197:Last of all, we print this out. It's actually going to the SORT filehandle, because that's the one that's
+198:File Tests
+199:207
+200:Chapter 6
+201:The test is -e, and it takes a file name as its argument. Just like open, this file name can also be
+202:where $filename contains the name of the file you want to check.
+203:Meaning
+204:-e
+205:True if the file exists.
+206:-f
+207:True if the file is a plain file – not a directory.
+208:-d
+209:True if the file is a directory.
+210:-z
+211:True if the file has zero size.
+212:-s
+213:True if the file has nonzero size – returns size of file in bytes.
+214:-r
+215:True if the file is readable by you.
+216:-w
+217:True if the file is writable by you.
+218:-x
+219:True if the file is executable by you.
+220:-o
+221:True if the file is owned by you.
+222:The last four tests will only make complete sense on operating systems for which files have meaningful
+223:Try It Out : Paranoid File Writing
+224:208
+225:Files and Data
+226:So, after all that, let's see how it copes, first of all with a text file that doesn't exist:
+227:209
+228:Chapter 6
+229:How It Works
+230:That last will only happen if we're happy with the file name and the computer can successfully open
+231:We need to first see whether or not what has been specified is actually a directory. If it is, we don't want
+232:We print a message and then use next to take us back to the top of the loop.
+233:210
+234:Files and Data
+235:If they want a different file, we merely go back to the top of the loop:
+236:If they want us to overwrite the file, we see if this is likely to be possible:
+237:First, we see if they actually own the file; it's unlikely they'll be allowed to overwrite a file that they do
+238:Next we check to see if there are any other reasons why we can't write on the file, and if there are, we
+239:If they want to back up the file, that is, rename the existing file to a new name, we see if this
+240:The rename operator renames a file; it takes two arguments: the current file name and the new name.
+241:If we couldn't rename the file, we explain why and start from the beginning again:
+242:211
+243:Chapter 6
+244:You may think this program is excessively paranoid, after all, it's 50 lines just to print a message on a
+245:Directories
+246:Globbing
+247:* would match everything.
+248:❑
+249:3* would match 3com.c and 3com.txt.
+250:❑
+251:?ail would match mail and Mail.
+252:❑
+253:*l would match perl, mail and Mail.
+254:We can do this kind of globbing in Perl: the glob operator takes a string and returns the matching files:
+255:>perl glob.plx
+256:212
+257:Files and Data
+258:Reading Directories
+259:Now to read each file in the directory, we use readdir on the directory handle:
+260:Try It Out : Examining A Directory
+261:Part of its output looks like this:
+262:213
+263:Chapter 6
+264:The files . and .. are special directories on DOS and UNIX, referring to the current and parent
+265:We then print out the name of each file, followed by some spaces. The length of the file name plus the
+266:First we test to see if the file is a directory, using the ordinary filetests we saw above:
+267:No, this isn't a typo: I do mean _ and not $_ here. Just as $_ is the default value for some operations,
+268:When Perl does a filetest, it actually looks up all the data at once – ownership, readability,
+269:Summary
+270:214
+271:Files and Data
+272:Exercises
+273:Write a program that can search for a specified string within all the files in a given directory.
+274:2.
+275:Modify the file backup facility in filetest1.plx so that it checks to see if a backup already exists
+276:215
+277:This work is licensed under the Creative Commons Attribution-NoDerivs-NonCommercial License. To view a copy of this
+278:
