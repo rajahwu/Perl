@@ -7,8 +7,8 @@
                           echo '- ' . h($page_title);
                         } ?></title>
   <meta charset="utf-8">
-  <link rel="stylesheet" media="all" href="<?php echo url_for('/stylesheets/public.css'); ?>" />
-  <script defer src="<?php echo url_for('/js/public.js') ?>"></script>
+  <link rel="stylesheet" media="all" href="<?php echo url_for(PUBLIC_PATH . '/dist/bundle.css'); ?>" />
+  <script defer src="<?php echo url_for(PUBLIC_PATH . '/dist/js/bundle.js') ?>"></script>
 </head>
 
 <body>

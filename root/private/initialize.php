@@ -14,7 +14,7 @@ define("PRIVATE_PATH", dirname(__FILE__));
 define("PROJECT_PATH", dirname(PRIVATE_PATH, 2));
 define("ROOT_PATH", dirname(PRIVATE_PATH, 1));
 define("PUBLIC_PATH", ROOT_PATH . '/public');
-define("SHARED_PATH", ROOT_PATH . '/shared');
+define("SHARED_PATH", PRIVATE_PATH . '/shared');
 
 // Assign the root URL to a PHP constant
 // * Do not need to include the domain
