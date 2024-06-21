@@ -1,0 +1,16 @@
+App Name: [Perl Training] Background Theme: Modern and Clean Primary Colors: #1E90FF (Dodger Blue), #FFFFFF (White), #000000 (Black) Secondary Colors: #FFD700 (Gold), #32CD32 (Lime Green) Style: Minimalistic
+Professional and Sleek
+Flat Design
+Elements to Include: Abstract Patterns: Incorporate subtle geometric patterns or gradients.
+Light Textures: Use soft textures that do not distract from the main content.
+Subtle Branding: Include faint, background watermarks or shapes related to the app's logo or theme.
+Mood/Atmosphere: Welcoming and Friendly
+Professional and Trustworthy
+Clean and Uncluttered
+Specific Requests: Ensure high contrast for readability of text and UI elements.
+Avoid overly complex designs or busy patterns.
+The background should complement the app’s primary function and user interface.
+Inspiration/References: Google Material Design backgrounds
+Apple’s iOS default backgrounds
+Microsoft Fluent Design backgrounds
+Resolution and Dimensions: Full HD (1920x1080 pixels) or higher for respo

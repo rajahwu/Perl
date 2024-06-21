@@ -1,0 +1,224 @@
+.
+├── README.md
+├── api
+│   └── docs
+├── apps
+│   ├── docs
+│   └── training
+│       ├── begperl
+│       │   ├── addendum
+│       │   │   └── webscraping
+│       │   │       ├── products.csv
+│       │   │       └── scraper.plx
+│       │   ├── begperl
+│       │   │   ├── addelem.plx
+│       │   │   ├── arraylen.plx
+│       │   │   ├── ascii.plx
+│       │   │   ├── aslice.plx
+│       │   │   ├── auto1.plx
+│       │   │   ├── auto2.plx
+│       │   │   ├── baddayarray1.plx
+│       │   │   ├── baddayarray2.plx
+│       │   │   ├── badlast.plx
+│       │   │   ├── badnums.plx
+│       │   │   ├── badprefix.plx
+│       │   │   ├── bitop1.plx
+│       │   │   ├── bool1.plx
+│       │   │   ├── bool2.plx
+│       │   │   ├── convert1.plx
+│       │   │   ├── convert2.plx
+│       │   │   ├── countdown.plx
+│       │   │   ├── currency1.plx
+│       │   │   ├── dayarray.plx
+│       │   │   ├── defined.plx
+│       │   │   ├── elems.plx
+│       │   │   ├── forlast.plx
+│       │   │   ├── forloop1.plx
+│       │   │   ├── forloop2.plx
+│       │   │   ├── goodnums.plx
+│       │   │   ├── guessnum.plx
+│       │   │   ├── hash1.plx
+│       │   │   ├── hash2.plx
+│       │   │   ├── hello1.plx
+│       │   │   ├── hello2.plx
+│       │   │   ├── heredoc.plx
+│       │   │   ├── joke1.plx
+│       │   │   ├── joke2.plx
+│       │   │   ├── looploop1.plx
+│       │   │   ├── looploop2.plx
+│       │   │   ├── looploop3.plx
+│       │   │   ├── loops
+│       │   │   │   ├── forloop1.plx
+│       │   │   │   ├── forloop2.plx
+│       │   │   │   ├── forloop3.plx
+│       │   │   │   ├── forloop4.plx
+│       │   │   │   ├── forloop5.plx
+│       │   │   │   ├── forloop6.plx
+│       │   │   │   └── forloop7.plx
+│       │   │   ├── months.plx
+│       │   │   ├── multilist.plx
+│       │   │   ├── next.plx
+│       │   │   ├── number1.plx
+│       │   │   ├── number4.plx
+│       │   │   ├── operator_precedence.md
+│       │   │   ├── password.plx
+│       │   │   ├── quicksum.plx
+│       │   │   ├── quotes1.plx
+│       │   │   ├── quotes2.plx
+│       │   │   ├── quotes5.plx
+│       │   │   ├── ranges.plx
+│       │   │   ├── references
+│       │   │   │   ├── chess.plx
+│       │   │   │   ├── dref1.plx
+│       │   │   │   ├── dref1alt.plx
+│       │   │   │   ├── dref2.plx
+│       │   │   │   ├── hash.plx
+│       │   │   │   ├── hashalt.plx
+│       │   │   │   ├── modelem.plx
+│       │   │   │   ├── modify1.plx
+│       │   │   │   ├── noref.plx
+│       │   │   │   └── refcount.plx
+│       │   │   ├── scalarsub.plx
+│       │   │   ├── sdrawkcab1.plx
+│       │   │   ├── sdrawkcab2.plx
+│       │   │   ├── sdrawkcab3.plx
+│       │   │   ├── sdrawkcab4.plx
+│       │   │   ├── shift.plx
+│       │   │   ├── sort1.plx
+│       │   │   ├── sort2.plx
+│       │   │   ├── sort3.plx
+│       │   │   ├── stacks.plx
+│       │   │   ├── until.plx
+│       │   │   ├── vars1.plx
+│       │   │   ├── walkies.plx
+│       │   │   ├── whatsargv.plx
+│       │   │   ├── while1.plx
+│       │   │   └── while2.plx
+│       │   ├── console
+│       │   │   └── bin
+│       │   │       └── create_perl_file.sh
+│       │   ├── directories.txt
+│       │   ├── docs
+│       │   │   ├── perl-lang-server.md
+│       │   │   ├── perldocs
+│       │   │   │   └── subs.txt
+│       │   │   └── tree.txt
+│       │   ├── filehanding
+│       │   │   ├── badopen.plx
+│       │   │   ├── beginning_perl_chap06.txt
+│       │   │   ├── copy.plx
+│       │   │   ├── directory.plx
+│       │   │   ├── filetest1.plx
+│       │   │   ├── fortune.plx
+│       │   │   ├── gettysburg.txt
+│       │   │   ├── glob.plx
+│       │   │   ├── headline.plx
+│       │   │   ├── inventory.plx
+│       │   │   ├── logfile.plx
+│       │   │   ├── nl.plx
+│       │   │   ├── nl2.plx
+│       │   │   ├── nl3.plx
+│       │   │   ├── nlexample.txt
+│       │   │   ├── output.log
+│       │   │   ├── quotes.dat
+│       │   │   ├── sort.plx
+│       │   │   ├── sort2.plx
+│       │   │   ├── sort3.plx
+│       │   │   ├── sorted.txt
+│       │   │   ├── sortme.txt
+│       │   │   ├── sortnum.txt
+│       │   │   ├── speech.txt
+│       │   │   ├── summary.plx
+│       │   │   ├── summary6
+│       │   │   ├── tail.plx
+│       │   │   ├── tail2.plx
+│       │   │   ├── test.txt
+│       │   │   ├── time.plx
+│       │   │   └── time2.plx
+│       │   ├── helloworld.plx
+│       │   ├── output.log
+│       │   ├── readme.md
+│       │   ├── regex
+│       │   │   ├── join.plx
+│       │   │   ├── match1.plx
+│       │   │   ├── match2.plx
+│       │   │   ├── match3.plx
+│       │   │   ├── match4.plx
+│       │   │   ├── matchtest.plx
+│       │   │   ├── matchtest2.plx
+│       │   │   ├── nomatch.plx
+│       │   │   ├── readme.md
+│       │   │   ├── rhyming.plx
+│       │   │   ├── split.plx
+│       │   │   ├── subst1.plx
+│       │   │   ├── subst2.plx
+│       │   │   └── wordlist.txt
+│       │   ├── subroutines
+│       │   │   ├── hello.plx
+│       │   │   ├── readme.md
+│       │   │   ├── seconds1.plx
+│       │   │   ├── seconds2.plx
+│       │   │   ├── subdecl.plx
+│       │   │   ├── subdeclalt.plx
+│       │   │   ├── subdeclalt2.plx
+│       │   │   ├── sumsquare.plx
+│       │   │   ├── total1.plx
+│       │   │   └── total2.plx
+│       │   ├── test.txt
+│       │   └── test1.txt
+│       ├── begperl.txt
+│       ├── docs
+│       └── training.txt
+├── config
+├── console
+│   ├── bin
+│   └── docs
+├── docs
+│   ├── docs_tree.txt
+│   └── readme.md
+├── env
+│   └── example.md
+├── index.php
+├── readme.md
+├── root
+│   ├── index.php
+│   ├── index.ts
+│   ├── private
+│   │   ├── classes
+│   │   ├── database_functions.php
+│   │   ├── db_credentials.php
+│   │   ├── functions.php
+│   │   ├── initialize.php
+│   │   ├── lib
+│   │   │   └── parsedown-1.7.4
+│   │   │       ├── LICENSE.txt
+│   │   │       ├── Parsedown.php
+│   │   │       ├── README.md
+│   │   │       └── composer.json
+│   │   └── shared
+│   │       ├── public_backlink.php
+│   │       ├── public_copyright_disclaimer.php
+│   │       ├── public_footer.php
+│   │       └── public_header.php
+│   ├── public
+│   │   ├── build
+│   │   │   ├── assets
+│   │   │   ├── css
+│   │   │   ├── index.js
+│   │   │   └── js
+│   │   └── dist
+│   └── shared
+│       ├── aside
+│       ├── body
+│       ├── footer
+│       └── header
+├── test
+├── tree.txt
+└── web
+    ├── docs
+    ├── index.html
+    ├── private
+    ├── public
+    └── src
+
+48 directories, 173 files
