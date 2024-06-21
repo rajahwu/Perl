@@ -1,4 +1,5 @@
-<?php 
+<?php
+// database_functions.php
 function db_connect() {
     $connection = new mysqli(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
     // var_dump($connection);
@@ -14,5 +15,3 @@ function confirm_db_connect($connection) {
         exit($msg);
     }
 }
-
-?>
