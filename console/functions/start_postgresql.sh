@@ -1,14 +1,14 @@
 #!/bin/bash
 source ./console/colors.sh
 
-start_php_fpm() {
-  echo -e "${YELLOW}Starting PHP 8.2-FPM...${NC}"
-  sudo service php8.2-fpm start
-  if sudo service php8.2-fpm status > /dev/null; then
-    echo -e "${GREEN}PHP 8.2-FPM started successfully.${NC}"
+start_postgresql() {
+  echo -e "${YELLOW}Starting PostgreSQL...${NC}"
+  sudo service postgresql start
+  if sudo service postgresql status > /dev/null; then
+    echo -e "${GREEN}PostgreSQL started successfully.${NC}"
     return 0
   else
-    echo -e "${RED}Failed to start PHP 8.2-FPM.${NC}"
+    echo -e "${RED}Failed to start PostgreSQL.${NC}"
     return 1
   fi
 }
