@@ -18,4 +18,6 @@ check_hostname() {
   local url_public="http://${hostname_ip}/public"
   echo -e -n "${CYAN}Curling URL: ${url_public} - Status Code: ${NC}"
   curl -o /dev/null -s -w "%{http_code}\n" "${url_public}"
+
+  return 0
 }
