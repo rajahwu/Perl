@@ -4,90 +4,39 @@ This project contains several directories, each serving a specific purpose. Belo
 
 ## Directory Structure
 
-```txt
-.
-├── api
-│   └── docs
-├── app
-│   ├── docs
-│   └── training
-├── bin
-├── cgi-bin
-├── composer.json
-├── composer.lock
-├── config
-├── console
-│   ├── bin
-│   ├── colors.sh
-│   ├── docs
-│   ├── functions
-│   ├── logs
-│   ├── refactor_functions.sh
-│   ├── tmp
-│   └── utils
-├── docs
-│   ├── docs_tree.txt
-│   ├── readme.md
-│   └── tree.txt
-├── env
-│   └── example.md
-├── index.php
-├── lib
-├── logs
-├── package-lock.json
-├── package.json
-├── readme.md
-├── root
-│   ├── index.php
-│   ├── index.ts
-│   ├── private
-│   └── public
-├── scripts
-├── tailwind.config.js
-├── test
-├── tmp
-└── web
-    ├── astro
-    ├── docs
-    ├── index.html
-    ├── private
-    ├── prompt.txt
-    ├── public
-    └── src
-```
-
 ### api
 
-Contains API-related documentation.
+API-related documentation.
 
 - **docs**: Documentation for the API.
 
 ### app
 
-Contains application-specific files and training materials.
+Application-specific files and training materials.
 
 - **docs**: Documentation for the app.
 - **training**: Training materials and resources.
 
 ### bin
 
-Contains executable scripts and binaries.
+Executable scripts and binaries.
 
 ### cgi-bin
 
-Contains CGI scripts for the web server.
+CGI scripts for the web server.
 
 ### config
-Contains configuration files for the application.
+
+Configuration files for the application.
 
 ### console
 
-Contains console scripts, utilities, and logs.
+Console scripts, utilities, and logs.
 
-- **bin**: Contains console binaries.
+- **bin**: Console binaries.
 - **colors.sh**: Color definitions for bash scripts.
 - **docs**: Documentation for console scripts.
-- **functions**: Function scripts for checking, starting, stopping, and restarting services.
+- **functions**: Function scripts for managing services.
 - **logs**: Log files for console operations.
 - **refactor_functions.sh**: Script for refactoring function directories.
 - **tmp**: Temporary files.
@@ -95,7 +44,7 @@ Contains console scripts, utilities, and logs.
 
 ### docs
 
-Contains general documentation for the project.
+General project documentation.
 
 - **docs_tree.txt**: Tree structure of the docs directory.
 - **readme.md**: Documentation for the docs directory.
@@ -103,21 +52,21 @@ Contains general documentation for the project.
 
 ### env
 
-Contains environment configuration files.
+Environment configuration files.
 
 - **example.md**: Example environment configuration.
 
 ### lib
 
-Contains library files and dependencies.
+Library files and dependencies.
 
 ### logs
 
-Contains log files for the application.
+Log files for the application.
 
 ### root
 
-Contains root-level files and directories.
+Root-level files and directories.
 
 - **index.php**: Entry point for the PHP application.
 - **index.ts**: Entry point for the TypeScript application.
@@ -126,15 +75,15 @@ Contains root-level files and directories.
 
 ### scripts
 
-Contains miscellaneous scripts for various tasks.
+Miscellaneous scripts for various tasks.
 
 ### tmp
 
-Contains temporary files.
+Temporary files.
 
 ### web
 
-Contains web-related files and directories.
+Web-related files and directories.
 
 - **astro**: Astro files for the web.
 - **docs**: Documentation for the web.
@@ -156,4 +105,4 @@ Contains web-related files and directories.
 
 ## Summary
 
-This project is organized into several directories, each with a specific role and purpose. The directories contain various files, scripts, and resources needed for the application to function correctly. Refer to the individual documentation files within each directory for more detailed information.
+This project is organized into several directories, each with a specific role and purpose. Refer to the individual documentation files within each directory for more detailed information.
