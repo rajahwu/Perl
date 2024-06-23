@@ -120,5 +120,3 @@ Starting Services: To start all services, run
 
 ./console/bin/services/status.sh
 ```
-
-This README provides a quick overview of the console directory's structure and the purpose of each subdirectory and file, along with basic usage instructions. Feel free to adjust it further as needed.
