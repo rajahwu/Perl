@@ -49,6 +49,7 @@ console/
 │   └── write_service_functions_to_tmp.sh
 └── vars
     └── colors.sh
+```
 
 ## Subdirectories and Files
 
@@ -88,7 +89,9 @@ Variable files.
 
 ## Usage
 
-Starting Services: To start all services, run:
+Starting Services: To start all services, run
+
+### Commands
 
 ```bash
 ./console/bin/services/start.sh
