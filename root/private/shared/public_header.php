@@ -16,5 +16,7 @@
   <header class="navbar bg-lime-400">
     <nav>
       <a class="text-lg" href="<?php url_for('/public/index.php') ?>">HOME</a>
+      <a href="_build/html/index.html" target="_blank">Docs</a>
+
     </nav>
   </header>

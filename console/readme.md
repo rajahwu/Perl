@@ -57,9 +57,9 @@ console/
 
 Contains scripts for various operations.
 
-### dev: Placeholder for development-related scripts.
+### dev: Placeholder for development-related scripts
 
-### services: Scripts to manage services.
+### services: Scripts to manage services
 
 ### docs
 
@@ -73,7 +73,7 @@ Contains service-specific scripts organized into subdirectories.
 
 Directory for storing log files.
 
-### refactor_functions.sh: Script to refactor functions and reorganize the directory structure.
+### refactor_functions.sh: Script to refactor functions and reorganize the directory structure
 
 ### tmp
 
