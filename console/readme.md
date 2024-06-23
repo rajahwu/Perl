@@ -94,21 +94,30 @@ Starting Services: To start all services, run
 ### Commands
 
 ```bash
+# Starting Services:
+# To check and start all services, run:
+
 ./console/bin/services/start.sh
-Stopping Services: To stop all services, run:
 ```
 
 ```bash
+# Stopping Services:
+# To stop all running services, run:
+
 ./console/bin/services/stop.sh
-Restarting Services: To restart all services, run:
 ```
 
 ```bash
+# Restarting Services:
+# To restart or start of all services, run:
+
 ./console/bin/services/restart.sh
-Checking Service Status: To check the status of all services, run:
 ```
 
 ```bash
+# Checking status of services:
+# To check the status of all services, run:
+
 ./console/bin/services/status.sh
 ```
 
