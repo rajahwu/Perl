@@ -4,6 +4,61 @@ This project contains several directories, each serving a specific purpose. Belo
 
 ## Directory Structure
 
+```txt
+.
+├── api
+│   └── docs
+├── app
+│   ├── docs
+│   └── training
+├── bin
+├── cgi-bin
+├── composer.json
+├── composer.lock
+├── config
+├── console
+│   ├── bin
+│   ├── docs
+│   ├── functions
+│   ├── logs
+│   ├── readme.md
+│   ├── refactor_functions.sh
+│   ├── tmp
+│   ├── utils
+│   └── vars
+├── docs
+│   ├── docs_tree.txt
+│   ├── readme.md
+│   └── tree.txt
+├── env
+│   └── example.md
+├── index.php
+├── lib
+├── logs
+├── package-lock.json
+├── package.json
+├── readme.md
+├── root
+│   ├── index.php
+│   ├── index.ts
+│   ├── private
+│   └── public
+├── scripts
+├── tailwind.config.js
+├── test
+├── tmp
+└── web
+    ├── astro
+    ├── docs
+    ├── index.html
+    ├── private
+    ├── prompt.txt
+    ├── public
+    └── src
+
+32 directories, 17 files
+```
+
 ### api
 
 API-related documentation.
