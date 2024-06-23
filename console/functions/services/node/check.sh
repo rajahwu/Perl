@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./console/colors.sh
+source ./console/vars/colors.sh
 
 check_node_version() {
   local required_version=18

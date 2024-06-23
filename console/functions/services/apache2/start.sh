@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./console/colors.sh
+source ./console/vars/colors.sh
 
 start_apache2() {
   echo -e "${YELLOW}Starting Apache2...${NC}"

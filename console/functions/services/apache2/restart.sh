@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./console/colors.sh
+source ./console/vars/colors.sh
 
 # Function to restart apache2
 restart_apache2() {

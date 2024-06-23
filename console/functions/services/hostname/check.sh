@@ -1,5 +1,5 @@
-# #!/bin/bash
-source ./console/colors.sh
+#!/bin/bash
+source ./console/vars/colors.sh
 
 check_hostname() {
   local hostname_ip
