@@ -1,6 +1,10 @@
 #!/bin/bash
+
+# Get the directory where the script is located
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Define the base directories
-BASE_DIR="./console/functions"
+BASE_DIR="$script_dir/../functions"
 NEW_BASE_DIR="$BASE_DIR/services"
 
 # Define service directories
@@ -39,12 +43,12 @@ move_scripts() {
 # Function to update service scripts
 update_service_scripts() {
   # Update start.sh
-  cat > ./console/bin/services/start.sh <<EOL
+  cat > "$script_dir/../bin/services/start.sh" <<EOL
 #!/bin/bash
 
 # Get the directory where the script is located
 script_dir="\$(cd "\$(dirname "\${BASH_SOURCE[0]}")" && pwd)"
-source "\$script_dir/../../colors.sh"
+source "\$script_dir/../../vars/colors.sh"
 
 # Source check functions
 source "\$script_dir/../../functions/services/apache2/check.sh"
@@ -81,10 +85,12 @@ echo -e "\${GREEN}All services checked and started as necessary.\${NC}"
 EOL
 
   # Update stop.sh
-  cat > ./console/bin/services/stop.sh <<EOL
+  cat > "$script_dir/../bin/services/stop.sh" <<EOL
 #!/bin/bash
+
+# Get the directory where the script is located
 script_dir="\$(cd "\$(dirname "\${BASH_SOURCE[0]}")" && pwd)"
-source "\$script_dir/../../colors.sh"
+source "\$script_dir/../../vars/colors.sh"
 
 # Source stop functions
 source "\$script_dir/../../functions/services/apache2/stop.sh"
@@ -102,10 +108,12 @@ echo -e "\${GREEN}Services stopped successfully.\${NC}"
 EOL
 
   # Update restart.sh
-  cat > ./console/bin/services/restart.sh <<EOL
+  cat > "$script_dir/../bin/services/restart.sh" <<EOL
 #!/bin/bash
+
+# Get the directory where the script is located
 script_dir="\$(cd "\$(dirname "\${BASH_SOURCE[0]}")" && pwd)"
-source "\$script_dir/../../colors.sh"
+source "\$script_dir/../../vars/colors.sh"
 
 # Source restart functions
 source "\$script_dir/../../functions/services/apache2/restart.sh"
@@ -121,12 +129,12 @@ echo -e "\${GREEN}Services restarted successfully.\${NC}"
 EOL
 
   # Update status.sh
-  cat > ./console/bin/services/status.sh <<EOL
+  cat > "$script_dir/../bin/services/status.sh" <<EOL
 #!/bin/bash
 
 # Get the directory where the script is located
 script_dir="\$(cd "\$(dirname "\${BASH_SOURCE[0]}")" && pwd)"
-source "\$script_dir/../../colors.sh"
+source "\$script_dir/../../vars/colors.sh"
 
 # Source status functions
 source "\$script_dir/../../functions/services/apache2/check.sh"
